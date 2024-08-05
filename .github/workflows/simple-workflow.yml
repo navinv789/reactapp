@@ -91,7 +91,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: check condition
         run: |
-          if ${{ github.ref != 'refs/heads/main' }} then
+          if [ "${github.ref}" != "refs/heads/main" ]; then
             echo "Condition is satisfied! Printing message... ${{ github.ref }}"
           else
             echo "Condition is not satisfied ${{ github.ref }}."
