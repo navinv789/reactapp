@@ -93,8 +93,8 @@ jobs:
         run: |
           CONDITION=true  # Set your condition here (e.g., an environment variable, a command output check, etc.)
           if [ github.ref != 'refs/heads/main' ]; then
-            echo "Condition is satisfied! Printing message..."
+            echo "Condition is satisfied! Printing message... ${{ github.ref }}"
           else
-            echo "Condition is not satisfied."
+            echo "Condition is not satisfied ${{ github.ref }}."
           fi
         
